@@ -1,0 +1,17 @@
+package ting;
+
+public class Madvare {
+
+	public static void main(String[] args) {
+		
+		Mad mad = new Mad("kål", 20);
+		Mad mad2 = new Mad("mejs", 25);
+		
+		
+		
+		System.out.println(mad);
+		System.out.println();
+		System.out.println(mad2);
+	}
+
+}

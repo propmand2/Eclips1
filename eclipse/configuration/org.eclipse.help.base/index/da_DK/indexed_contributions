@@ -1,0 +1,25 @@
+#This is a generated file; do not edit.
+#Tue Oct 23 17:43:59 CEST 2018
+org.eclipse.help=org.eclipse.help\n3.8.100.v20180512-1136
+org.eclipse.mylyn.wikitext.help.ui=org.eclipse.mylyn.wikitext.help.ui\n3.0.19.201711172000
+org.eclipse.oomph.p2.doc=org.eclipse.oomph.p2.doc\n1.9.0.v20180529-0916
+org.eclipse.m2e.core.ui=org.eclipse.m2e.core.ui\n1.9.0.20180606-2036
+org.eclipse.ui.intro=org.eclipse.ui.intro\n3.5.200.v20180328-0550
+org.eclipse.wst.xsdeditor.doc.user=org.eclipse.wst.xsdeditor.doc.user\n1.0.800.v201711201733
+org.eclipse.mylyn.help.ui=org.eclipse.mylyn.help.ui\n3.24.0.v20170629-1737
+org.eclipse.epp.mpc.help.ui=org.eclipse.epp.mpc.help.ui\n1.7.0.v20180606-2225
+org.eclipse.help.base=org.eclipse.help.base\n4.2.200.v20180611-0500
+org.eclipse.wst.xmleditor.doc.user=org.eclipse.wst.xmleditor.doc.user\n1.1.0.v201802171654
+org.eclipse.jdt=org.eclipse.jdt\n3.14.0.v20180611-0500
+org.eclipse.epp.mpc.ui=org.eclipse.epp.mpc.ui\n1.7.0.v20180607-0001
+org.eclipse.oomph.setup.doc=org.eclipse.oomph.setup.doc\n1.9.0.v20180529-0916
+org.eclipse.platform.doc.user=org.eclipse.platform.doc.user\n4.8.0.v20180531-1055
+org.eclipse.ui.cheatsheets=org.eclipse.ui.cheatsheets\n3.5.200.v20180418-0908
+org.eclipse.eclemma.doc=org.eclipse.eclemma.doc\n3.1.0.201805281015
+org.eclipse.platform=org.eclipse.platform\n4.8.0.v20180611-0500
+org.eclipse.wst.sse.doc.user=org.eclipse.wst.sse.doc.user\n1.2.0.v201802171654
+org.eclipse.egit.doc=org.eclipse.egit.doc\n5.0.0.201806131550-r
+org.eclipse.jdt.doc.user=org.eclipse.jdt.doc.user\n3.14.0.v20180605-1207
+org.eclipse.recommenders.rcp=org.eclipse.recommenders.rcp\n2.5.3.v20180609-1554
+org.eclipse.wst.dtdeditor.doc.user=org.eclipse.wst.dtdeditor.doc.user\n1.1.0.v201802171654
+org.eclipse.ui.intro.universal=org.eclipse.ui.intro.universal\n3.3.200.v20180418-0908

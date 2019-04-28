@@ -1,0 +1,85 @@
+package ting;
+
+import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.geometry.Orientation;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.Separator;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.*;
+import javafx.stage.Stage;
+
+public class MadFX extends Application {
+
+	TableView<Mad> table;
+
+	public static void main(String[] args) {
+		launch(args);
+
+	}
+
+	@Override
+	public void start(Stage Mystage) throws Exception {
+
+		Mystage.setTitle("Køleskab");
+
+		BorderPane borderPane = new BorderPane();
+
+		BorderPane.setAlignment(borderPane, Pos.CENTER);
+
+		Label mad2 = new Label("Mad");
+
+		TextField mad = new TextField();
+		
+		Label antal2 = new Label("Mængde");
+
+		TextField antal = new TextField();
+
+		
+		VBox vbox = new VBox(mad2, mad, antal2, antal);
+		borderPane.setLeft(vbox);
+
+		TableColumn<Mad, String> navnColumn = new TableColumn<>("Navn");
+		navnColumn.setMinWidth(200);
+		navnColumn.setCellValueFactory(new PropertyValueFactory<>("navn"));
+		
+		TableColumn<Mad, String> mængdeColumn = new TableColumn<>("Mængde");
+		mængdeColumn.setMinWidth(200);
+		mængdeColumn.setCellValueFactory(new PropertyValueFactory<>("mængde"));
+		
+		table = new TableView<>();
+		table.setItems(getMad());
+		table.getColumns().addAll(navnColumn,mængdeColumn);
+		
+		borderPane.setRight(table);
+
+		
+
+		borderPane.setPrefSize(300, 300);
+
+		Scene scene = new Scene(borderPane);
+
+		Mystage.setScene(scene);
+
+		Mystage.show();
+
+	}
+	
+	public ObservableList<Mad> getMad(){
+		ObservableList<Mad> mad = FXCollections.observableArrayList();
+		mad.add(new Mad("Kål", 10));
+		mad.add(new Mad("Mejs", 25));
+		mad.add(new Mad("Gullerødder", 15));
+		return mad;
+		
+	}
+}

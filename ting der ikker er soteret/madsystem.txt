@@ -1,0 +1,110 @@
+
+public class MadFX extends Application {
+
+	TableView<Mad> table;
+
+	public static void main(String[] args) {
+		launch(args);
+
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public void start(Stage Mystage) throws Exception {
+
+		Mystage.setTitle("Køleskab");
+
+		BorderPane borderPane = new BorderPane();
+
+		BorderPane.setAlignment(borderPane, Pos.CENTER);
+
+		Label mad2 = new Label("Mad");
+
+		TextField mad = new TextField();
+		
+		Label antal2 = new Label("Mængde");
+
+		TextField antal = new TextField();
+
+		
+		VBox vbox = new VBox(mad2, mad, antal2, antal);
+		borderPane.setLeft(vbox);
+
+		TableColumn<Mad, String> navnColumn = new TableColumn<>("Navn");
+		navnColumn.setMinWidth(200);
+		navnColumn.setCellValueFactory(new PropertyValueFactory<>("navn"));
+		
+		TableColumn<Mad, String> mængdeColumn = new TableColumn<>("Mængde");
+		mængdeColumn.setMinWidth(200);
+		mængdeColumn.setCellValueFactory(new PropertyValueFactory<>("mængde"));
+		
+		table = new TableView<>();
+		table.setItems(getMad());
+		table.getColumns().addAll(navnColumn,mængdeColumn);
+		
+		borderPane.setRight(table);
+
+		
+
+		borderPane.setPrefSize(300, 300);
+
+		Scene scene = new Scene(borderPane);
+
+		Mystage.setScene(scene);
+
+		Mystage.show();
+
+	}
+	
+	public ObservableList<Mad> getMad(){
+		ObservableList<Mad> mad = FXCollections.observableArrayList();
+		mad.add(new Mad("Kål", 10));
+		mad.add(new Mad("Mejs", 25));
+		mad.add(new Mad("Gullerødder", 15));
+		return mad;
+		
+	}
+
+
+--------------------------
+
+public class Mad {
+
+	private String navn;
+	private double mængde;
+	
+	
+	public Mad(String navn, double mængde) {
+		super();
+		this.navn = navn;
+		this.mængde = mængde;
+	}
+
+
+	public String getNavn() {
+		return navn;
+	}
+
+
+	public void setNavn(String navn) {
+		this.navn = navn;
+	}
+
+
+	public double getMængde() {
+		return mængde;
+	}
+
+
+	public void setMængde(int mængde) {
+		this.mængde = mængde;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Mad navn = " + navn + ", mængde i styk = " + mængde;
+	}
+	
+	
+	
